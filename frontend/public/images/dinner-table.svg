@@ -1,0 +1,20 @@
+<svg width="900" height="900" viewBox="0 0 900 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg"><stop stop-color="#7B305A"/><stop offset="1" stop-color="#321329"/></radialGradient>
+    <radialGradient id="plate"><stop stop-color="#FFFDF4"/><stop offset=".72" stop-color="#F4EFE6"/><stop offset="1" stop-color="#D9D1C9"/></radialGradient>
+    <linearGradient id="metal"><stop stop-color="#FFF7E5"/><stop offset=".45" stop-color="#9D8D83"/><stop offset=".7" stop-color="#FFF7E5"/><stop offset="1" stop-color="#62534D"/></linearGradient>
+    <filter id="shadow"><feGaussianBlur stdDeviation="18"/></filter>
+  </defs>
+  <rect width="900" height="900" rx="70" fill="url(#bg)"/>
+  <g opacity=".45" filter="url(#shadow)"><ellipse cx="445" cy="500" rx="300" ry="260" fill="#100812"/></g>
+  <g stroke="#9CAD65" stroke-width="10" stroke-linecap="round"><path d="M90 700C170 630 210 550 220 460"/><path d="M680 760C620 675 640 550 730 450"/><path d="M105 700l-24-33m55 0-20-39m62-24-35-20m590 126 25-35m-50-5 23-41m-33-41 37-20"/></g>
+  <circle cx="450" cy="500" r="267" fill="#EEE9E0" opacity=".35"/>
+  <circle cx="450" cy="490" r="240" fill="url(#plate)"/>
+  <circle cx="450" cy="475" r="174" fill="#FDF9EF" stroke="#D7CEC5" stroke-width="5"/>
+  <circle cx="450" cy="475" r="135" fill="#F8F1E5"/>
+  <path d="M430 475c28-64 84-57 79-3-5 47-57 72-95 34 8 28 48 44 72 20" stroke="#8F4B3C" stroke-width="13" stroke-linecap="round"/>
+  <g fill="url(#metal)" stroke="#66534F" stroke-width="3"><rect x="178" y="325" width="18" height="390" rx="9"/><path d="M166 320h42l-5-94c-2-30-30-30-32 0z"/><rect x="704" y="318" width="19" height="390" rx="9"/><path d="M693 300h41l-7-102h-27z"/></g>
+  <g fill="#B2BD6C"><ellipse cx="122" cy="650" rx="13" ry="30" transform="rotate(-50 122 650)"/><ellipse cx="170" cy="610" rx="13" ry="30" transform="rotate(-40 170 610)"/><ellipse cx="720" cy="650" rx="13" ry="30" transform="rotate(45 720 650)"/><ellipse cx="768" cy="590" rx="13" ry="30" transform="rotate(40 768 590)"/></g>
+  <g opacity=".92"><ellipse cx="650" cy="205" rx="72" ry="100" fill="#DFD2D0" fill-opacity=".35" stroke="#FFF4E9" stroke-width="5"/><ellipse cx="650" cy="205" rx="44" ry="66" fill="#8F6281" fill-opacity=".45" stroke="#FFF4E9" stroke-width="3"/><path d="M650 305v80m-46 0h92" stroke="#FFF4E9" stroke-width="6"/></g>
+  <path d="M0 95L210 190" stroke="#E88B66" stroke-width="120" opacity=".32"/><path d="M760 810l140 90" stroke="#E88B66" stroke-width="110" opacity=".25"/>
+</svg>

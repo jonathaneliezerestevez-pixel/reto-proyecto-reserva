@@ -1,0 +1,10 @@
+---
+interface Props { light?: boolean }
+const { light = true } = Astro.props
+const brandClass = light ? 'text-[#fff8df]' : 'text-[#39152f]'
+---
+
+<a href="/" class:list={['display-font focus-ring inline-flex items-center gap-3 text-xl tracking-[0.22em]', brandClass]}>
+  <span class="flex h-9 w-9 items-center justify-center rounded-full border text-sm tracking-normal" style={`border-color: ${light ? '#e8bd72' : '#67254e'}; color: ${light ? '#e8bd72' : '#67254e'}`}>R</span>
+  <span>RESERVAS</span>
+</a>

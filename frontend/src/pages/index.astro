@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import Brand from '../components/layout/Brand.astro'
+import SectionLabel from '../components/ui/SectionLabel.astro'
+---
+
+<BaseLayout title="Reservas para Cena" description="Reserva una mesa para una experiencia gastronómica inolvidable.">
+  <main class="relative isolate min-h-screen overflow-hidden bg-[#39152f]">
+    <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_50%,#b34c4b_0%,transparent_24%),radial-gradient(circle_at_88%_85%,#d47c55_0%,transparent_18%),linear-gradient(135deg,#67254e_0%,#39152f_53%,#271022_100%)]"></div>
+    <div class="absolute -right-24 top-24 -z-10 h-72 w-72 rounded-full bg-[#e8bd72]/10 blur-3xl"></div>
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-7 lg:px-10">
+      <Brand />
+      <a href="/login" class="focus-ring rounded-full border border-[#fff8df]/50 px-5 py-2 text-xs uppercase tracking-[0.2em] transition hover:bg-[#fff8df] hover:text-[#39152f]">Administrador</a>
+    </nav>
+
+    <section class="mx-auto grid max-w-6xl items-center gap-12 px-6 pb-20 pt-10 lg:grid-cols-[1.05fr_.95fr] lg:px-10 lg:pb-28 lg:pt-20">
+      <div class="max-w-xl">
+        <SectionLabel>Una mesa para recordar</SectionLabel>
+        <h1 class="text-7xl font-medium leading-[0.83] tracking-[-0.04em] text-[#fff8df] sm:text-8xl lg:text-[9rem]">Reservas<br /><em class="text-[#e8bd72]">para Cena</em></h1>
+        <p class="mt-8 max-w-md text-lg leading-relaxed text-[#d5b9ca]">Sabores de temporada, luz cálida y una mesa preparada para recibirte.</p>
+        <a href="/login" class="focus-ring mt-9 inline-flex items-center gap-4 rounded-full bg-[#fff8df] px-7 py-4 text-sm font-semibold text-[#39152f] transition hover:bg-[#e8bd72]">Gestionar reservas <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="relative mx-auto w-full max-w-[520px]">
+        <div class="absolute -left-3 top-5 z-10 flex h-24 w-24 -rotate-6 flex-col items-center justify-center rounded-full border border-[#e8bd72] bg-[#39152f]/90 text-center text-[#e8bd72] shadow-xl backdrop-blur sm:-left-8"><strong class="display-font text-2xl leading-none">Desde</strong><strong class="display-font text-3xl leading-none">1986</strong><span class="mt-1 text-[7px] uppercase tracking-widest">Tradición camba</span></div>
+        <div class="absolute -inset-3 rounded-[45%] border border-[#e8bd72]/30"></div>
+        <img src="/images/dinner-table.svg" alt="Mesa preparada para una cena elegante" class="relative w-full drop-shadow-[0_25px_35px_rgba(0,0,0,.38)]" />
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-6xl border-t line px-6 py-14 lg:px-10">
+      <div class="grid gap-10 lg:grid-cols-[.8fr_1.2fr]">
+        <div><SectionLabel>Sabores cambas</SectionLabel><h2 id="restaurant-name" class="text-5xl">La Casa del Camba</h2><p id="restaurant-description" class="mt-5 leading-relaxed text-[#d5b9ca]">Restaurante especializado en sabores cambas y culinaria criolla. Atiende desde 1986.</p></div>
+        <div><p class="mb-5 text-sm uppercase tracking-[0.22em] text-[#e8bd72]">Lo que puedes disfrutar</p><div id="restaurant-menu" class="grid gap-3 sm:grid-cols-2"><div class="rounded-lg border border-[#fff8df]/20 bg-[#501d41]/50 p-4 text-lg">Picadas</div><div class="rounded-lg border border-[#fff8df]/20 bg-[#501d41]/50 p-4 text-lg">Carnes silvestres</div><div class="rounded-lg border border-[#fff8df]/20 bg-[#501d41]/50 p-4 text-lg">Comidas típicas</div><div class="rounded-lg border border-[#fff8df]/20 bg-[#501d41]/50 p-4 text-lg">Buffet de comidas criollas</div><div class="rounded-lg border border-[#fff8df]/20 bg-[#501d41]/50 p-4 text-lg">Carnes a la parrilla</div><div class="rounded-lg border border-[#fff8df]/20 bg-[#501d41]/50 p-4 text-lg">Carne de cerdo</div><div class="rounded-lg border border-[#fff8df]/20 bg-[#501d41]/50 p-4 text-lg">Parrilladas</div><div class="rounded-lg border border-[#fff8df]/20 bg-[#501d41]/50 p-4 text-lg">Ensaladas y postres</div></div></div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-6xl px-6 pb-14 lg:px-10">
+      <div class="relative overflow-hidden rounded-2xl border border-[#e8bd72]/40 bg-[#501d41] p-7 sm:p-10">
+        <div class="absolute -right-16 -top-20 h-56 w-56 rounded-full bg-[#e8bd72]/10 blur-2xl"></div>
+        <div class="relative grid items-center gap-8 lg:grid-cols-[1fr_auto]">
+          <div>
+            <div class="mb-4 flex flex-wrap items-center gap-3"><span class="rounded-full bg-[#e8bd72] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-[#39152f]">Restaurante demo</span><span class="text-xs uppercase tracking-[0.25em] text-[#e8bd72]">Catering · Eventos · Celebraciones</span></div>
+            <h2 class="max-w-2xl text-4xl leading-none text-[#fff8df] sm:text-5xl">El sabor de Santa Cruz llega a tu evento</h2>
+            <p class="mt-4 max-w-2xl leading-relaxed text-[#d5b9ca]">Además de sus platos típicos y carnes a la parrilla, La Casa del Camba ofrece atención para domicilios, empresas y eventos especiales.</p>
+          </div>
+          <a href="https://www.casadelcamba.com/" target="_blank" rel="noreferrer" class="focus-ring inline-flex items-center justify-center gap-3 rounded-full bg-[#fff8df] px-6 py-3 text-sm font-semibold text-[#39152f] transition hover:bg-[#e8bd72]">Ver sitio oficial <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="mx-auto grid max-w-6xl gap-6 border-t line px-6 py-8 text-sm sm:grid-cols-3 lg:px-10">
+      <div><p class="mb-1 text-[#d5b9ca]">Teléfono de reservas</p><strong class="text-lg">912 345 678</strong></div>
+      <div><p class="mb-1 text-[#d5b9ca]">Dirección</p><strong class="text-lg">Calle Mayor 123, Madrid</strong></div>
+      <div class="sm:text-right"><p class="mb-1 text-[#d5b9ca]">Horario</p><strong class="text-lg">Martes — Domingo · 19:00</strong></div>
+    </footer>
+  </main>
+  <script>
+    import { getRestaurante } from '../services/restaurante.service'
+    const text = (id: string, value: string | null | undefined) => { const element = document.querySelector(`#${id}`); if (element && value) element.textContent = value }
+    void getRestaurante().then(({ data }) => { text('restaurant-name', data.Nombre); text('restaurant-description', data.Descripcion) }).catch(() => undefined)
+  </script>
+</BaseLayout>

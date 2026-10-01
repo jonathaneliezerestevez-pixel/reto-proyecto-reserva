@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import Brand from '../components/layout/Brand.astro'
+import Field from '../components/ui/Field.astro'
+---
+
+<BaseLayout title="Acceso de administrador">
+  <main class="flex min-h-screen items-center justify-center bg-[radial-gradient(circle_at_20%_20%,#67254e,transparent_40%),#271022] px-6 py-12">
+    <div class="w-full max-w-md">
+      <div class="mb-12 text-center"><Brand /><p class="mt-8 text-sm text-[#d5b9ca]">Acceso al panel de reservas</p></div>
+      <form id="login-form" class="rounded-2xl border border-[#67254e] bg-[#39152f]/80 p-7 shadow-2xl backdrop-blur sm:p-9">
+        <h1 class="text-4xl text-[#fff8df]">Bienvenido</h1>
+        <p class="mt-2 text-sm text-[#d5b9ca]">Ingresa tus credenciales para continuar.</p>
+        <div class="mt-8 space-y-5"><Field label="Usuario" name="Usuario" placeholder="Tu usuario" /><Field label="Contraseña" name="Contrasena" type="password" placeholder="••••••••" /></div>
+        <p id="login-error" class="mt-4 hidden rounded-lg border border-red-300/30 bg-red-500/10 p-3 text-sm text-red-200"></p>
+        <button class="focus-ring mt-6 w-full rounded-lg bg-[#fff8df] px-5 py-3.5 font-semibold text-[#39152f] transition hover:bg-[#e8bd72] disabled:cursor-wait disabled:opacity-60" type="submit">Iniciar sesión</button>
+        <a href="/" class="focus-ring mt-6 block text-center text-sm text-[#d5b9ca] hover:text-[#fff8df]">← Volver al inicio</a>
+      </form>
+    </div>
+  </main>
+  <script>
+    import { login, isAuthenticated } from '../services/auth.service'
+    const form = document.querySelector<HTMLFormElement>('#login-form')!
+    const error = document.querySelector<HTMLElement>('#login-error')!
+    if (isAuthenticated()) window.location.replace('/admin/reservas')
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault()
+      const button = form.querySelector('button')!
+      button.disabled = true
+      error.classList.add('hidden')
+      const data = new FormData(form)
+      try {
+        await login(String(data.get('Usuario')), String(data.get('Contrasena')))
+        window.location.assign('/admin/reservas')
+      } catch (err) {
+        error.textContent = err instanceof Error ? err.message : 'No fue posible iniciar sesión'
+        error.classList.remove('hidden')
+        button.disabled = false
+      }
+    })
+  </script>
+</BaseLayout>

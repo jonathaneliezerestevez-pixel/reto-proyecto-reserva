@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+:root {
+  --plum-950: #271022;
+  --plum-900: #39152f;
+  --plum-800: #501d41;
+  --plum-700: #67254e;
+  --cream: #fff8df;
+  --gold: #e8bd72;
+  --muted: #d5b9ca;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--cream);
+  background: var(--plum-950);
+  font-family: 'DM Sans', sans-serif;
+}
+
+h1, h2, h3, .display-font { font-family: 'Cormorant Garamond', Georgia, serif; }
+
+.grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.04'/%3E%3C/svg%3E");
+}
+
+.line { border-color: rgb(255 248 223 / 30%); }
+.focus-ring:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
